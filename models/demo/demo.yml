@@ -15,10 +15,19 @@ models:
       - name: emp_salary
         tests:
           - value_check
-
+  - name: customer
+    description: "DBT model for customer"
+  - name: customer_view
+    description: "DBT model customer view"
+    
 sources:
   - name: employee
     database: ANALYTICS
     schema: DBT_KALLEYNE
     tables:
       - name: EMPLOYEE_RAW
+  - name: customer
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: CUSTOMER_SRC
