@@ -19,7 +19,9 @@ models:
     description: "DBT model for customer"
   - name: customer_view
     description: "DBT model customer view"
-    
+  - name: sales
+    description: "DBT model for sales table"
+
 sources:
   - name: employee
     database: ANALYTICS
@@ -31,3 +33,8 @@ sources:
     schema: DBT_KALLEYNE
     tables:
       - name: CUSTOMER_SRC
+  - name: sales
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: SALES_SRC
