@@ -21,6 +21,18 @@ models:
     description: "DBT model customer view"
   - name: sales
     description: "DBT model for sales table"
+  - name: products
+    description: "DBT model for product table"
+  - name: purchase
+    description: "DBT model for purchase table"
+  - name: orders
+    description: "DBT model for clean orders"
+  - name: final_orders
+    description: "Final orders model"
+  - name: patient
+    description: "Patient snapshot model"
+  - name: session
+    description: "DBT sessions model"
 
 sources:
   - name: employee
@@ -38,3 +50,28 @@ sources:
     schema: DBT_KALLEYNE
     tables:
       - name: SALES_SRC
+  - name: products
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: PRODUCT_SRC
+  - name: purchase
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: PURCHASE_SRC
+  - name: orders
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: BASIC_ORDERS
+  - name: patient
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: PATIENT_SRC
+  - name: session
+    database: ANALYTICS
+    schema: DBT_KALLEYNE
+    tables:
+      - name: SESSION_SRC
